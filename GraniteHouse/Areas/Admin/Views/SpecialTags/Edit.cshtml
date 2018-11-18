@@ -1,9 +1,9 @@
-﻿@model GraniteHouse.Models.ProductTypes
+﻿@model GraniteHouse.Models.SpecialTags
 @{
     ViewData["Title"] = "Edit";
 }
 
-<h2 class="text-info">Edit Product Type</h2>
+<h2 class="text-info"> Edit Special Tag</h2>
 
 <form method="post" asp-action="Edit">
     <div class="p-4 border rounded">
@@ -20,7 +20,7 @@
         </div>
 
         <div class="form-group">
-            <input type="submit" class="btn btn-primary" asp-route-id="@Model.Id" value="Update" />
+            <input type="submit" class="btn btn-warning"  asp-route-id="@Model.Id" value="Update" />
             <a asp-action="Index" class="btn btn-dark">Back to List</a>
         </div>
     </div>
