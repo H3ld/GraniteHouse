@@ -34,12 +34,17 @@ namespace GraniteHouse.Areas.Admin.Controllers
 		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> Create(ProductTypes productTypes)
 		{
+			
 			if(ModelState.IsValid)
 			{
 				_db.Add(productTypes);
 				await _db.SaveChangesAsync();
 				return RedirectToAction(nameof(Index));
 			}
+				
+
+			ProductTypes coooool = new ProductTypes();
+
 
 			return View(productTypes);
 		}
